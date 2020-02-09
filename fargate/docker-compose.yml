@@ -1,0 +1,10 @@
+version: '3'
+services:
+  fargate-hello:
+    image: ECR_URL/hello
+    logging:
+      driver: awslogs
+      options: 
+        awslogs-group: fargate-hello
+        awslogs-region: eu-west-1
+        awslogs-stream-prefix: fargate
